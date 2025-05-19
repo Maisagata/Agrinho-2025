@@ -1,0 +1,392 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #4CAF50;
+    --dark-color: #1B5E20;
+    --light-color: #C8E6C9;
+    --text-color: #333;
+    --text-light: #fff;
+    --bg-color: #f9f9f9;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--dark-color);
+}
+
+/* Header */
+#main-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#main-header h1 {
+    font-size: 2.5rem;
+}
+
+/* Navegação */
+#main-nav {
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+#main-nav li {
+    padding: 1rem;
+}
+
+#main-nav a {
+    color: var(--text-light);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#main-nav a:hover {
+    color: var(--light-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400?text=Campo+de+Gado');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding: 5rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Seções */
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Sobre */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text {
+    padding: 1rem;
+}
+
+/* Gado */
+.cattle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cattle-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+}
+
+.cattle-card:hover {
+    transform: translateY(-5px);
+}
+
+.cattle-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cattle-card h3 {
+    padding: 1rem 1rem 0;
+    color: var(--primary-color);
+}
+
+.cattle-card p {
+    padding: 0 1rem 1rem;
+}
+
+.cattle-btn {
+    margin: 0 1rem 1rem;
+    width: calc(100% - 2rem);
+}
+
+/* Processo */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Contato */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.contact-info {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--dark-color);
+}
+
+/* Footer */
+#main-footer {
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    padding: 3rem 0 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: var(--text-light);
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--light-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #main-nav ul.show {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+}
+
+/* Acessibilidade */
+:focus {
+    outline: 3px solid var(--light-color);
+    outline-offset: 2px;
+}
+
+.high-contrast {
+    --primary-color: #000;
+    --secondary-color: #000;
+    --dark-color: #000;
+    --light-color: #fff;
+    --text-color: #000;
+    --text-light: #fff;
+    --bg-color: #fff;
+}
